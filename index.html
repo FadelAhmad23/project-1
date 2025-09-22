@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fadel Ahmad • Resume</title>
+  <base href="./">
+  <style>
+    :root { --bg:#0e1116; --card:#151a21; --muted:#8892a6; --text:#e6edf3; --brand:#4aa3ff; --brand-2:#b782ff; --ring:rgba(74,163,255,.4); --radius:16px; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:radial-gradient(1200px 800px at 10% -10%, rgba(74,163,255,.07), transparent 60%),radial-gradient(1000px 600px at 100% 0%, rgba(183,130,255,.08), transparent 60%),var(--bg)}
+    a{color:inherit;text-decoration:none}
+    .shell{max-width:1100px;margin:28px auto;padding:0 18px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+    .nav-title{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.3px}
+    .initials{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-weight:800;color:#0e1116;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 10px 22px rgba(0,0,0,.35)}
+    .tabs{display:flex;gap:8px}
+    .tab{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:var(--text);cursor:pointer;transition:.18s ease;backdrop-filter:blur(6px)}
+    .tab:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.18)}
+    .tab[aria-selected="true"]{background:linear-gradient(135deg,rgba(74,163,255,.22),rgba(183,130,255,.22));border-color:var(--ring);box-shadow:0 0 0 3px var(--ring) inset}
+    .grid{display:grid;grid-template-columns:320px 1fr;gap:24px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;box-shadow:0 8px 30px rgba(0,0,0,.35);backdrop-filter:blur(6px)}
+    .section-title{font-size:14px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;margin:0 0 8px}
+    .h1{font-size:34px;line-height:1.1;margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .chip{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);margin:4px 6px 0 0;font-size:13px}
+    .list{margin:8px 0 0 0;padding-left:18px}
+    .list li{margin:6px 0}
+    .avatar{width:100%;border-radius:14px;aspect-ratio:4/5;object-fit:cover;display:block;border:1px solid rgba(255,255,255,.14);box-shadow:0 10px 28px rgba(0,0,0,.45)}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);font-weight:600}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0e1116;border-color:transparent}
+    .page{display:none}
+    .page.active{display:block}
+    .proj-hero{padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(74,163,255,.08),rgba(183,130,255,.05));box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+    code.inline{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:rgba(255,255,255,.07);padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="nav">
+      <div class="nav-title"><span class="initials">FA</span> <span>Fadel Ahmad</span></div>
+      <nav class="tabs" role="tablist" aria-label="Project Tabs">
+        <button class="tab" id="tab-project1" data-route="#/project1" role="tab" aria-controls="project1" aria-selected="false">Project 1</button>
+        <button class="tab" id="tab-project2" data-route="#/project2" role="tab" aria-controls="project2" aria-selected="false">Project 2</button>
+      </nav>
+    </header>
+
+    <main id="app" role="main">
+      <!-- Resume Page -->
+      <section id="resume" class="page active" role="region" aria-label="Resume">
+        <div class="grid">
+          <aside class="card">
+            <img class="avatar" src="./IMG_2709.JPG" alt="Portrait of Fadel Ahmad" />
+            <h1 class="h1" style="margin-top:14px">Fadel Ahmad</h1>
+            <p class="muted">Computer Science student • Oakland University</p>
+            <div class="cta-row">
+              <a class="btn primary" href="mailto:fadelahmad@oakland.edu>Email</a>
+              <a class="btn" href="tel:+13133758414">Call</a>
+            </div>
+            <h3 class="section-title" style="margin-top:18px">Profile</h3>
+            <p style="margin:8px 0 0 0">Second‑year Computer Science student with a solid background in Java and Python. Team‑oriented, Dean’s List, 10+ years of customer‑service experience. Looking to grow as a programmer and contribute to software projects.</p>
+            <h3 class="section-title" style="margin-top:18px">Contact</h3>
+            <ul class="list" style="list-style:none;padding-left:0">
+              <li>📍 4069 appoline st. 48126</li>
+              <li>📞 (313) 375‑8414</li>
+              <li>✉️ fadelahmad@oakland.edu</li>
+            </ul>
+            <h3 class="section-title" style="margin-top:18px">Skills</h3>
+            <div>
+              <span class="chip">Java</span>
+              <span class="chip">Python</span>
+              <span class="chip">C (beginner)</span>
+              <span class="chip">OOP</span>
+              <span class="chip">Debugging</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">VS Code</span>
+              <span class="chip">Teamwork</span>
+              <span class="chip">Problem‑Solving</span>
+            </div>
+            <h3 class="section-title" style="margin-top:18px">Hobbies</h3>
+            <div>
+              <span class="chip">Basketball</span>
+              <span class="chip">Working out</span>
+              <span class="chip">Tech tinkering</span>
+              <span class="chip">Travel</span>
+            </div>
+          </aside>
+          <section class="card" aria-label="Resume Content">
+            <h3 class="section-title">Education</h3>
+            <div style="margin-bottom:14px">
+              <strong>B.S. in Computer Science — Oakland University</strong><br/>
+              Expected Graduation: 2028 • GPA: 3.47 • Dean’s List (Winter 2025)<br/>
+              <span class="muted">Relevant coursework:</span> Java Programming, Python Programming, Data Structures, Software Development Fundamentals
+            </div>
+            <div style="margin-bottom:18px">
+              <strong>Utica High School</strong> — Diploma (2024) • GPA: 3.8<br/>
+              <span class="muted">AP:</span> Calculus, Economics, Government
+            </div>
+            <h3 class="section-title">Experience</h3>
+            <div style="margin-bottom:18px">
+              <strong>Customer Service Associate — Krazy Shawarma</strong> (2015 – Present)<br/>
+              Rochester Hills, MI • Family‑owned business
+              <ul class="list">
+                <li>Provided high‑quality service in a fast‑paced environment for a diverse customer base.</li>
+                <li>Strengthened communication and conflict‑resolution skills through daily interactions.</li>
+                <li>Juggled multiple tasks to keep operations efficient and customers satisfied.</li>
+              </ul>
+            </div>
+            <h3 class="section-title">Projects</h3>
+            <div class="proj-hero">
+              <p style="margin:0 0 8px 0"><strong>Daily Task Manager (Java)</strong> — Team project implementing modular classes for add/edit/remove flows with GitHub‑based version control.</p>
+              <div class="cta-row"><button class="btn" data-route="#/project1">Open Project 1</button></div>
+              <hr style="border:none;border-top:1px solid rgba(255,255,255,.1);margin:12px 0">
+              <p style="margin:0 0 8px 0"><strong>Clinic Appointment Scheduler (Python + Flask)</strong> — Solo project prototyping CRUD appointments, basic auth, and CSV export.</p>
+              <div class="cta-row"><button class="btn" data-route="#/project2">Open Project 2</button></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Project 1 Page -->
+      <section id="project1" class="page" role="tabpanel" aria-labelledby="tab-project1">
+        <section class="card">
+          <h2 class="h1">Project 1 — Daily Task Manager (Java)</h2>
+          <p class="muted">A desktop task manager created by a 4‑person team as a course final project. Built with object‑oriented design and GitHub collaboration.</p>
+          <ul class="list">
+            <li>Designed <code class="inline">Task</code>, <code class="inline">TaskList</code>, and <code class="inline">Storage</code> classes with clear interfaces.</li>
+            <li>Implemented CRUD flows, keyboard shortcuts, and simple file‑based persistence.</li>
+            <li>Wrote unit tests for core methods; used pull requests and code reviews.</li>
+          </ul>
+          <div class="cta-row">
+            <button class="btn" data-route="#/">Back to Resume</button>
+          </div>
+        </section>
+      </section>
+
+      <!-- Project 2 Page -->
+      <section id="project2" class="page" role="tabpanel" aria-labelledby="tab-project2">
+        <section class="card">
+          <h2 class="h1">Project 2 — Clinic Appointment Scheduler (Python + Flask)</h2>
+          <p class="muted">A simple web app to create, update, and cancel appointments with CSV export for reporting. Focused on clean routes and basic authentication.</p>
+          <ul class="list">
+            <li>RESTful routes using Flask blueprints; lightweight templates with Jinja2.</li>
+            <li>SQLite for storage; CSV export and basic search by date/patient.</li>
+            <li>Session‑based login and role‑gated actions for staff vs. admin.</li>
+          </ul>
+          <div class="cta-row">
+            <button class="btn" data-route="#/">Back to Resume</button>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Hash-based router so relative paths work in local files
+    const routes = { '#/':'resume', '#/project1':'project1', '#/project2':'project2' };
+
+    function setActive(route){
+      const pageId = routes[route] || 'resume';
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected','false'));
+      const tab = document.querySelector(`.tab[data-route="${route}"]`);
+      if(tab) tab.setAttribute('aria-selected','true');
+    }
+
+    function navigate(route){ location.hash = route; }
+
+    // Hook up buttons/tabs
+    document.addEventListener('click', (e)=>{
+      const btn = e.target.closest('[data-route]');
+      if(btn){ e.preventDefault(); navigate(btn.getAttribute('data-route')); }
+    });
+
+    window.addEventListener('hashchange', ()=> setActive(location.hash || '#/'));
+    // Initial load
+    setActive(location.hash || '#/');
+  </script>
+</body>
+</html>
+
+
