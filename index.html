@@ -34,8 +34,6 @@
     .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0e1116;border-color:transparent}
     .page{display:none}
     .page.active{display:block}
-    .proj-hero{padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(74,163,255,.08),rgba(183,130,255,.05));box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
-    code.inline{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:rgba(255,255,255,.07);padding:2px 6px;border-radius:6px}
   </style>
 </head>
 <body>
@@ -57,7 +55,7 @@
             <h1 class="h1" style="margin-top:14px">Fadel Ahmad</h1>
             <p class="muted">Computer Science student • Oakland University</p>
             <div class="cta-row">
-              <a class="btn primary" href="mailto:fadelahmad@oakland.edu>Email</a>
+              <a class="btn primary" href="mailto:fadelahmad@oakland.edu">Email</a>
               <a class="btn" href="tel:+13133758414">Call</a>
             </div>
             <h3 class="section-title" style="margin-top:18px">Profile</h3>
@@ -111,10 +109,8 @@
             </div>
             <h3 class="section-title">Projects</h3>
             <div class="proj-hero">
-              <p style="margin:0 0 8px 0"><strong>Daily Task Manager (Java)</strong> — Team project implementing modular classes for add/edit/remove flows with GitHub‑based version control.</p>
               <div class="cta-row"><button class="btn" data-route="#/project1">Open Project 1</button></div>
               <hr style="border:none;border-top:1px solid rgba(255,255,255,.1);margin:12px 0">
-              <p style="margin:0 0 8px 0"><strong>Clinic Appointment Scheduler (Python + Flask)</strong> — Solo project prototyping CRUD appointments, basic auth, and CSV export.</p>
               <div class="cta-row"><button class="btn" data-route="#/project2">Open Project 2</button></div>
             </div>
           </section>
@@ -131,6 +127,7 @@
             <li>Implemented CRUD flows, keyboard shortcuts, and simple file‑based persistence.</li>
             <li>Wrote unit tests for core methods; used pull requests and code reviews.</li>
           </ul>
+          <p><strong>GitHub Repository:</strong> <a href="https://github.com/MohamedAhmad7/PROJECT" target="_blank">GitHub</a></p>
           <div class="cta-row">
             <button class="btn" data-route="#/">Back to Resume</button>
           </div>
@@ -156,7 +153,6 @@
   </div>
 
   <script>
-    // Hash-based router so relative paths work in local files
     const routes = { '#/':'resume', '#/project1':'project1', '#/project2':'project2' };
 
     function setActive(route){
@@ -170,17 +166,19 @@
 
     function navigate(route){ location.hash = route; }
 
-    // Hook up buttons/tabs
     document.addEventListener('click', (e)=>{
       const btn = e.target.closest('[data-route]');
       if(btn){ e.preventDefault(); navigate(btn.getAttribute('data-route')); }
     });
 
     window.addEventListener('hashchange', ()=> setActive(location.hash || '#/'));
-    // Initial load
     setActive(location.hash || '#/');
   </script>
 </body>
 </html>
+
+
+
+
 
 
